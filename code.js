@@ -1,3 +1,19 @@
+// Intro cover
+const introCover = document.querySelector(".intro");
+// load cover and backgound text
+window.onload = ()=> {
+    introCover.classList.add("writing-intro");
+};
+// Click to hide the cover
+introCover.addEventListener("click", () => {
+    introCover.classList.add("fadeout");
+    setTimeout(function(){
+        introCover.style.display = "none";
+    }, 1000);
+});
+
+
+
 const vids = [
     "/videos/code1.mov",
     "/videos/code2.mov",

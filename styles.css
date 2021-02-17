@@ -24,7 +24,7 @@ main {
     flex-direction: column;
 }
 .category-container1, .category-container2 {
-    height: 25%;
+    height: 25vh;
     width: 86vw;
     display: flex;
     justify-content:space-evenly;
@@ -283,17 +283,18 @@ footer {
     cursor: pointer;
 }
 .writing-intro {
-    height: 54vh;
+    height: 80vh;
     width: 88vw;
     position: absolute;
-    top: 10vh;
+    top: 0;
+    right: 12vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding-bottom: 200px;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255, 255, 255, .9);
     z-index: 20;
 }
 .writing-intro:hover {
@@ -302,7 +303,6 @@ footer {
 .fadeout{
     opacity: 0;
     transition-duration: 1.3s;
-    /* display: none; */
 }
 .fadeout .intro {
     display: block;
@@ -311,183 +311,183 @@ footer {
 .writing-caption {
     margin: 0 30px 0 30px;
     font-size: 30px;
+    width: 70%
 }
 .writing-content-container {
     margin-top: 20px;
-    width: 50%;
     text-align: left;
     font-size: 24px;
 }
 .writing-icon1 {
-    background-image: url("/images/writing1.jpg");
+    background-image: url("/images/writing/writing1.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon2 {
-    background-image: url("/images/writing2.jpg");
+    background-image: url("/images/writing/writing2.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon3 {
-    background-image: url("/images/writing3.jpg");
+    background-image: url("/images/writing/writing3.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon4 {
-    background-image: url("/images/writing4.jpg");
+    background-image: url("/images/writing/writing4.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon5 {
-    background-image: url("/images/writing5.jpg");
+    background-image: url("/images/writing/writing5.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon6 {
-    background-image: url("/images/writing6.jpg");
+    background-image: url("/images/writing/writing6.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon7 {
-    background-image: url("/images/writing7.jpg");
+    background-image: url("/images/writing/writing7.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon8 {
-    background-image: url("/images/writing8.jpg");
+    background-image: url("/images/writing/writing8.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon9 {
-    background-image: url("/images/writing9.jpg");
+    background-image: url("/images/writing/writing9.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon10 {
-    background-image: url("/images/writing10.jpg");
+    background-image: url("/images/writing/writing10.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon11 {
-    background-image: url("/images/writing11.jpg");
+    background-image: url("/images/writing/writing11.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon12 {
-    background-image: url("/images/writing12.jpg");
+    background-image: url("/images/writing/writing12.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon13 {
-    background-image: url("/images/writing13.jpg");
+    background-image: url("/images/writing/writing13.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon14 {
-    background-image: url("/images/writing14.jpg");
+    background-image: url("/images/writing/writing14.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon15 {
-    background-image: url("/images/writing15.jpg");
+    background-image: url("/images/writing/writing15.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon16 {
-    background-image: url("/images/writing16.jpg");
+    background-image: url("/images/writing/writing16.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon17 {
-    background-image: url("/images/writing17.jpg");
+    background-image: url("/images/writing/writing17.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon18 {
-    background-image: url("/images/writing18.jpg");
+    background-image: url("/images/writing/writing18.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon19 {
-    background-image: url("/images/writing19.jpg");
+    background-image: url("/images/writing/writing19.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon20 {
-    background-image: url("/images/writing20.jpg");
+    background-image: url("/images/writing/writing20.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon21 {
-    background-image: url("/images/writing21.jpg");
+    background-image: url("/images/writing/writing21.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon22 {
-    background-image: url("/images/writing22.jpg");
+    background-image: url("/images/writing/writing22.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon23 {
-    background-image: url("/images/writing23.jpg");
+    background-image: url("/images/writing/writing23.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon24 {
-    background-image: url("/images/writing24.jpg");
+    background-image: url("/images/writing/writing24.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
     background-position: center;
 }
 .writing-icon25 {
-    background-image: url("/images/writing25.jpg");
+    background-image: url("/images/writing/writing25.jpg");
     background-size: 200px;
     width: 90%;
     height: 90%;
@@ -499,6 +499,17 @@ footer {
     background-color: rgba(255, 255, 255, .8);
     visibility: hidden;
 }
+.large-article-box{
+    background-color:rosybrown;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+}
 .large-article {
     height: 80%;
     /* width: 80%; */
@@ -506,7 +517,6 @@ footer {
     background-color:rgba(255, 255, 189, .9);
     box-shadow: 2px 2px 6px 8px rgba(69, 69, 3,.4);
     border-radius: 2%;
-    display: none;
     justify-content: center;
     position: absolute;
     top: 8%;
@@ -521,16 +531,13 @@ footer {
 
 /* travel */
 .countries-container {
-    height: 88vh;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    /* height: 88vh; */
+    width: 80%;
     font-size: 70px;
-    justify-content: space-between;
-    color: #fafaf5;
+    justify-content: center;
+    align-items: center;
     font-style:italic;
     z-index: 1;
-    text-align: center;
 }
 .map-container {
     width: 60%;
@@ -545,10 +552,20 @@ footer {
 .map {
     width: 100%;
 }
-.country {
-    flex: 1 3 auto;
+.country-pic-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    justify-self: center;
+    width: 88%;
+    height: 80vh;
+    position: fixed;
+    left: 0;
+    z-index:2;
 }
-
+.travel-pic {
+    background-size: 100%;
+}
 /* code */
 .video-wrapper {
     width: 74%;

@@ -77,8 +77,8 @@ const travelPics = [
 ]
 
 const introCover = document.querySelector(".intro");
-
 const countryPicContaienr = document.querySelector(".country-pic-container");
+const countryPicFocus = document.querySelector(".country-pic-focus");
 
 // load cover and backgound text
 window.onload = ()=> {
@@ -94,19 +94,37 @@ introCover.addEventListener("click", () => {
 
 // load images in the background
 for(let i=0; i<travelPics.length; i++) {
+    // load each pics
     const div = document.createElement("div");
     div.classList.add("travel-pic");
     let chosenTravelPic = travelPics[i];
-    console.log(chosenTravelPic);
-    // div.setAttribute("style", `background-image: url('${travelPics[i]}')`);
-    div.style.backgroundImage = `url("${chosenTravelPic}")`;
-    // div.style.backgroundImage = "url('images/travel/1.jpg')";
-    div.setAttribute("style", "background-size: 200px");
-    console.log(div.style.backgoroundImage);
-    // div.setAttribute("style", "width: 98%");
-    // div.setAttribute("style", "height: 98%");
+    div.style.backgroundImage = `url('${chosenTravelPic}')`;
+    div.style.backgroundSize = "250%";
+    div.style.backgroundPosition = "center";
     countryPicContaienr.appendChild(div);
-    // mouseover to change color
+
+    // set blur by default
+    const hoverBox = document.createElement("div");
+    hoverBox.classList.add("hover-box");
+    hoverBox.style.visibility = "visible";
+
+    // display large pic
+    const largePic = document.createElement("img");
+    largePic.classList.add("focus-pic");
+    countryPicFocus.appendChild(largePic);
+
+    div.addEventListener("mouseover", () => {
+        hoverBox.style.visibility = "hidden";
+        largePic.src = chosenTravelPic;
+        countryPicFocus.style.display = "block";
+        console.log(countryPicFocus.style.display);
+    });
+    div.addEventListener("mouseout", () => {
+        hoverBox.style.visibility = "visible";
+        largePic.src = "";
+        countryPicFocus.style.display = "none";
+    });
+    div.appendChild(hoverBox);
     // p.addEventListener("mouseover", () => {
     //     console.log("mouse over!");
     //     p.style.color = "#ed478c";
@@ -119,4 +137,15 @@ for(let i=0; i<travelPics.length; i++) {
     // });
 }
 
+// click to hide/show the map
+const map = document.querySelector(".map-container");
+map.addEventListener("click", () => {
+    if(map.classList.contains("map-container-lg")) {
+        map.classList.remove("map-container-lg")
+        map.classList.add("map-container-sm");
+    } else {
+        map.classList.remove("map-container-sm");
+        map.classList.add("map-container-lg");
+    }
+})
 

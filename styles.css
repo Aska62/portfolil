@@ -500,7 +500,6 @@ footer {
     visibility: hidden;
 }
 .large-article-box{
-    background-color:rosybrown;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -539,15 +538,28 @@ footer {
     font-style:italic;
     z-index: 1;
 }
-.map-container {
+.map-container:hover {
+    cursor: pointer;
+}
+.map-container-lg{
     width: 60%;
     /* align-self: center; */
     position: absolute;
     top: 16%;
     left: 50%;
     transform: translate(-60%, 0);
-    display: inline;
     z-index: 5;
+    transition-duration: .8s;
+}
+.map-container-sm {
+    width: 48px;
+    height: 48px;
+    border-radius: 20%;
+    position: absolute;
+    top: 5px;
+    right: 120px;
+    z-index: 5;
+    transition-duration: .8s;
 }
 .map {
     width: 100%;
@@ -563,9 +575,23 @@ footer {
     left: 0;
     z-index:2;
 }
-.travel-pic {
-    background-size: 100%;
+.country-pic-focus {
+    width: 60%;
+    height: content;
+    margin: 0;
+    padding: 0;
+    /* background-color:aquamarine; */
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-60%, 0);
+    z-index: 3;
+    display: none;
 }
+.focus-pic {
+    width: 100%;
+}
+
 /* code */
 .video-wrapper {
     width: 74%;

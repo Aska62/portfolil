@@ -1,89 +1,198 @@
-const countries = [
-    "Hong Kong",
-    "Malaysia",
-    "Italy",
-    "Vatican",
-    "Australia",
-    "Czech Republic",
-    "France",
-    "Switzerland",
-    "Taiwan",
-    "Uzbekistan",
-    "Canada",
-    "USA",
-    "Mexico",
-    "China",
-    "Morocco",
-    "Turkey",
-    "Singapore",
-    "Myanmar",
-    "Indonesia",
-    "Thailand",
-    "Cambodia",
-    "Laos",
-    "Vietnam",
-    "South Korea",
-    "United Arab Emirates",
-    "Austria",
-    "Slovenia",
-    "Bosnia and Herzegovina",
-    "Croatia",
-    "Serbia",
-    "Hungary",
-    "Slovakia",
-    "Nepal",
-    "Ethiopia",
-    "Philippines",
-    "Japan"
-]
-
-// Countries pics
-const travelPics = [
-    "/images/travel/1.jpg",
-    "/images/travel/2.jpg",
-    "/images/travel/3.jpg",
-    "/images/travel/4.jpg",
-    "/images/travel/5.jpg",
-    "/images/travel/6.jpg",
-    "/images/travel/7.jpg",
-    "/images/travel/8.jpg",
-    "/images/travel/9.jpg",
-    "/images/travel/10.jpg",
-    "/images/travel/11.jpg",
-    "/images/travel/12.jpg",
-    "/images/travel/13.jpg",
-    "/images/travel/14.jpg",
-    "/images/travel/15.jpg",
-    "/images/travel/16.jpg",
-    "/images/travel/17.jpg",
-    "/images/travel/18.jpg",
-    "/images/travel/19.jpg",
-    "/images/travel/20.jpg",
-    "/images/travel/21.jpg",
-    "/images/travel/22.jpg",
-    "/images/travel/23.jpg",
-    "/images/travel/24.jpg",
-    "/images/travel/25.jpg",
-    "/images/travel/26.jpg",
-    "/images/travel/27.jpg",
-    "/images/travel/28.jpg",
-    "/images/travel/29.jpg",
-    "/images/travel/30.jpg",
-    "/images/travel/31.jpg",
-    "/images/travel/32.jpg",
-    "/images/travel/33.jpg",
-    "/images/travel/34.jpg",
-    "/images/travel/35.jpg",
-]
+// Countries pics and location name
+const travelPicsObj = {
+    1: {
+        image: "/images/travelpic/1.jpg",
+        name: "Bueng Kan, Thailand",
+    },
+    2: {
+        image: "/images/travelpic/2.jpg",
+        name: "Udon Thani, Thailand",
+    },
+    3: {
+        image: "/images/travelpic/3.jpg",
+        name: "Split, Croatia",
+    },
+    4: {
+        image: "/images/travelpic/17.jpg",
+        name: "Dan Sai, Thailand",
+    },
+    5: {
+        image: "/images/travelpic/5.jpg",
+        name: "Mostar, Bosnia and Herzegovina",
+    },
+    6: {
+        image: "/images/travelpic/6.jpg",
+        name: "Koh Tao, Thailand",
+    },
+    7: {
+        image: "/images/travelpic/7.jpg",
+        name: "Bali, Indonesia",
+    },
+    8: {
+        image: "/images/travelpic/8.jpg",
+        name: "Bordubur, Indonesia",
+    },
+    9: {
+        image: "/images/travelpic/9.jpg",
+        name: "Abu Dhabi, United Arab Emirates",
+    },
+    10: {
+        image: "/images/travelpic/10.jpg",
+        name: "Mon Bridge, Thailand",
+    },
+    11: {
+        image: "/images/travelpic/11.jpg",
+        name: "Erta Ale, Ethiopia",
+    },
+    12: {
+        image: "/images/travelpic/12.jpg",
+        name: "Loei, Thailand",
+    },
+    13: {
+        image: "/images/travelpic/13.jpg",
+        name: "Chiang Khang, Thailand",
+    },
+    14: {
+        image: "/images/travelpic/14.jpg",
+        name: "Kanchanaburi, Thailand",
+    },
+    15: {
+        image: "/images/travelpic/15.jpg",
+        name: "Jiufen, Taiwan",
+    },
+    16: {
+        image: "/images/travelpic/16.jpg",
+        name: "Pulau Menjangan, Indonesia",
+    },
+    17: {
+        image: "/images/travelpic/4.jpg",
+        name: "Prasat Mang Tam, Thailand",
+    },
+    18: {
+        image: "/images/travelpic/18.jpg",
+        name: "Adis Ababa, Ethiopia",
+    },
+    19: {
+        image: "/images/travelpic/19.jpg",
+        name: "Bo Sang, Thailand",
+    },
+    20: {
+        image: "/images/travelpic/20.jpg",
+        name: "Lake Bled, Slovenia",
+    },
+    21: {
+        image: "/images/travelpic/21.jpg",
+        name: "Belgrade, Servia",
+    },
+    22: {
+        image: "/images/travelpic/22.jpg",
+        name: "Bueng Kan, Thailand",
+    },
+    23: {
+        image: "/images/travelpic/23.jpg",
+        name: "Kathmandu, Nepal",
+    },
+    24: {
+        image: "/images/travelpic/24.jpg",
+        name: "Bueng Kan, Thailand",
+    },
+    25: {
+        image: "/images/travelpic/25.jpg",
+        name: "Bratislava, Slovakia",
+    },
+    26: {
+        image: "/images/travelpic/26.jpg",
+        name: "Petchaburi, Thailand",
+    },
+    27: {
+        image: "/images/travelpic/27.jpg",
+        name: "Vienna, Austria",
+    },
+    28: {
+        image: "/images/travelpic/28.jpg",
+        name: "Mt. Bromo, Indonesia",
+    },
+    29: {
+        image: "/images/travelpic/29.jpg",
+        name: "Chesky Krumlov, Czeck Republic",
+    },
+    30: {
+        image: "/images/travelpic/30.jpg",
+        name: "Split, Croatia",
+    },
+    31: {
+        image: "/images/travelpic/31.jpg",
+        name: "Erta Ale, Ethiopia",
+    },
+    32: {
+        image: "/images/travelpic/32.jpg",
+        name: "Khao Yai, Thailand",
+    },
+    33: {
+        image: "/images/travelpic/33.jpg",
+        name: "Coron, Philippines",
+    },
+    34: {
+        image: "/images/travelpic/34.jpg",
+        name: "Luang Prabang, Laos",
+    },
+    35: {
+        image: "/images/travelpic/35.jpg",
+        name: "Inle Lake, Myammar",
+    },
+}
+// get object values for accessibility
+const travelPicsList = Object.values(travelPicsObj);
 
 const introCover = document.querySelector(".intro");
 const countryPicContaienr = document.querySelector(".country-pic-container");
 const countryPicFocus = document.querySelector(".country-pic-focus");
 
-// load cover and backgound text
+// load cover and backgound images
 window.onload = ()=> {
     introCover.classList.add("writing-intro");
-}
+    // load images in the background
+    for(let i = 0; i < travelPicsList.length; i++){
+        // load each pics
+        const div = document.createElement("div");
+        div.classList.add("travel-pic");
+        const chosenTravelPic = travelPicsList[i].image;
+        div.style.backgroundImage = `url("${chosenTravelPic}")`;
+        div.style.backgroundSize = "250%";
+        div.style.backgroundPosition = "center";
+        countryPicContaienr.appendChild(div);
+
+        // set blur by default
+        const hoverBox = document.createElement("div");
+        hoverBox.classList.add("hover-box");
+        hoverBox.style.visibility = "visible";
+
+        // load focus pic
+        const largePic = document.createElement("img");
+        largePic.classList.add("focus-pic");
+        countryPicFocus.appendChild(largePic);
+
+        // load the location name on focus
+        const p = document.createElement("p");
+        p.classList.add("focus-location-name");
+        countryPicFocus.appendChild(p);
+
+        div.addEventListener("mouseover", () => {
+            hoverBox.style.visibility = "hidden";
+            largePic.src = chosenTravelPic;
+            p.textContent = travelPicsList[i].name;
+            countryPicFocus.style.display = "block";
+        });
+        div.addEventListener("mouseout", () => {
+            hoverBox.style.visibility = "visible";
+            largePic.src = "";
+            p.textContent = "";
+            countryPicFocus.style.display = "none";
+        });
+        div.appendChild(hoverBox);
+
+    };
+};
 // Click to hide the cover
 introCover.addEventListener("click", () => {
     introCover.classList.add("fadeout");
@@ -92,60 +201,25 @@ introCover.addEventListener("click", () => {
     }, 1000);
 });
 
-// load images in the background
-for(let i=0; i<travelPics.length; i++) {
-    // load each pics
-    const div = document.createElement("div");
-    div.classList.add("travel-pic");
-    let chosenTravelPic = travelPics[i];
-    div.style.backgroundImage = `url('${chosenTravelPic}')`;
-    div.style.backgroundSize = "250%";
-    div.style.backgroundPosition = "center";
-    countryPicContaienr.appendChild(div);
 
-    // set blur by default
-    const hoverBox = document.createElement("div");
-    hoverBox.classList.add("hover-box");
-    hoverBox.style.visibility = "visible";
+// change position of focused image
+const bodyElement = document.querySelector("body");
+bodyElement.addEventListener("mousemove", getMouseDirection, false);
 
-    // display large pic
-    const largePic = document.createElement("img");
-    largePic.classList.add("focus-pic");
-    countryPicFocus.appendChild(largePic);
+const box = document.querySelector(".box");
 
-    div.addEventListener("mouseover", () => {
-        hoverBox.style.visibility = "hidden";
-        largePic.src = chosenTravelPic;
-        countryPicFocus.style.display = "block";
-        console.log(countryPicFocus.style.display);
-    });
-    div.addEventListener("mouseout", () => {
-        hoverBox.style.visibility = "visible";
-        largePic.src = "";
-        countryPicFocus.style.display = "none";
-    });
-    div.appendChild(hoverBox);
-    // p.addEventListener("mouseover", () => {
-    //     console.log("mouse over!");
-    //     p.style.color = "#ed478c";
-    //     p.style.zIndex = "100";
-    // });
-    // // Mouseout to fade
-    // p.addEventListener("mouseout", () => {
-    //     p.style.color = "#fafaf5";
-    //     p.style.zIndex = "1";
-    // });
-}
+function getMouseDirection(e) {
+    // define X position
+    if(e.pageX > 500) {
+        countryPicFocus.style.left = `${e.pageX - 520}px`;
 
-// click to hide/show the map
-const map = document.querySelector(".map-container");
-map.addEventListener("click", () => {
-    if(map.classList.contains("map-container-lg")) {
-        map.classList.remove("map-container-lg")
-        map.classList.add("map-container-sm");
     } else {
-        map.classList.remove("map-container-sm");
-        map.classList.add("map-container-lg");
-    }
-})
-
+        countryPicFocus.style.left = `${e.pageX + 20}px`;
+    };
+    // define Y position
+    if(e.pageY > 300) {
+        countryPicFocus.style.bottom =`${e.pageY - 100}px`;
+    } else {
+        countryPicFocus.style.bottom = `${e.pageY + 20}px`;
+    };
+};

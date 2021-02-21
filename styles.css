@@ -632,3 +632,52 @@ video {
     font-size: 28px;
     transition-duration: .4s;
 }
+
+/* Dive */
+.dive-main {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+.dive-header-container {
+    width: 78%;
+    height: max-content;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    color:#8c8c23;
+    margin-top: 5px;
+}
+.dive-header-1 {
+    font-size: 38px;
+}
+.dive-header-2 {
+    font-size: 52px;
+}
+.dive-header-3 {
+    font-size: 68px;
+}
+.dive-header-1, .dive-header-2, .dive-header-3 {
+    padding: 0 8px 0 8px;
+    margin: 0;
+}
+.dive-vid-container {
+    width: 68vw;
+    margin-top: 18px;
+    text-align: center;
+}
+.dive-desc {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    color:#8c8c23;
+    margin-top: 10px;
+}

@@ -644,7 +644,7 @@ video {
     flex-wrap: wrap;
     overflow: scroll;
 }
-.dive-header-container {
+.dive-header-container, .capture-header-container {
     width: 78%;
     height: max-content;
     display: flex;
@@ -654,16 +654,16 @@ video {
     color:#8c8c23;
     margin-top: 5px;
 }
-.dive-header-1 {
+.dive-header-1, .capture-header-1 {
     font-size: 38px;
 }
-.dive-header-2 {
+.dive-header-2, .capture-header-2 {
     font-size: 52px;
 }
-.dive-header-3 {
+.dive-header-3, .capture-header-3 {
     font-size: 68px;
 }
-.dive-header-1, .dive-header-2, .dive-header-3 {
+.dive-header-1, .dive-header-2, .dive-header-3, .capture-header-1, .capture-header-2, .capture-header-3 {
     padding: 0 8px 0 8px;
     margin: 0;
 }
@@ -672,7 +672,7 @@ video {
     margin-top: 18px;
     text-align: center;
 }
-.dive-desc {
+.dive-desc, .capture-desc {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -680,4 +680,107 @@ video {
     font-size: 30px;
     color:#8c8c23;
     margin-top: 10px;
+}
+
+/* capture */
+.slider-container {
+    width: 88vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container {
+    max-width: 64vw;
+    max-height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 24vh;
+}
+.image {
+    width: 100%;
+    height: relative;
+    transition: all 1s ease-in-out;
+    box-shadow: 0px 5px 7px 6px rgba(69, 69, 3,.4);
+}
+.right {
+    position: fixed;
+    right: -2000px;
+    opacity: 0;
+}
+.left {
+    position: fixed;
+    left: -2000px;
+    opacity: 0;
+}
+.button {
+    width: 30vw;
+    height: 60vh;
+    opacity: 0;
+}
+.previous {
+    position: fixed;
+    left: 0;
+    top: 20vh;
+    z-index: 30;
+}
+.next {
+    position: fixed;
+    right: 10vw;
+    top: 20vh;
+    z-index: 30;
+}
+.button:hover{
+    cursor: pointer;
+    background: rgba(191, 105, 105, .7);
+    color: whitesmoke;
+}
+.capture-desc-cont {
+    max-width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-self:center;
+    align-items: center;
+    position: fixed;
+    bottom: 23vh;
+}
+
+.capture-desc, .capture-header-1, .capture-header-2, .capture-header-3 {
+    text-align: center;
+    color: rgba(255, 255, 255, .9);
+    text-shadow: 2px 2px #666617;
+}
+.link-insta {
+    background-color: rgba(255, 255, 255, );
+    width: 92px;
+    height: 92px;
+    border-radius: 30%;
+    font-size: 90px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 12vw;
+    bottom: 14vh;
+    color: rgba(201, 66, 66, .9);
+    z-index: 50;
+}
+.link-insta:hover {
+    cursor: pointer;
+    font-size: 90px;
+    color: rgba(201, 66, 66, 1);
+    background-color:rgba(255, 255, 255, .5);
+}
+.capt-insta {
+    align-self: center;
+    font-size: 90px;
+}
+.insta-msg {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
 }

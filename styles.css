@@ -1,5 +1,6 @@
 html {
     color:#666617;
+    font-family: "Quesha", sans-serif;
 }
 
 header {
@@ -10,15 +11,11 @@ header {
 }
 
 main {
-    /* height: 80vh; */
     width: 88vw;
     display: flex;
     overflow: scroll;
-    /* justify-content: space-between; */
-    /* align-items: center; */
 }
 .main-content {
-    /* height: 100%; */
     width: 88vw;
     display: flex;
     flex-direction: column;
@@ -28,7 +25,7 @@ main {
     width: 86vw;
     display: flex;
     justify-content:space-evenly;
-    font-size: 120px;
+    font-size: 180px;
     font-style:italic;
     align-items: center;
     color: #fafaf5;
@@ -46,18 +43,21 @@ a {
 .name-container {
     height: 25%;
     width: 88vw;
-    font-size: 20px;
+    font-size: 40px;
     color:#666617;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-duration: 0.5s;
 }
 .name {
     color:#666617;
+    font-size: 40px;
+    transition-duration: .5s;
 }
 .name:hover {
     color: #c94242;
+    font-size: 60px;
+    transition-duration: .5s;
 }
 
 .name-container:hover {
@@ -108,7 +108,7 @@ a {
     transition-duration: 1s;
 }
 .menu {
-    font-size: 25px;
+    font-size: 45px;
     margin: 30px 0 25px 0;
     color:#666617;
 }
@@ -170,15 +170,25 @@ footer {
 }
 
 /* about */
+.content-wrapper {
+    width: 88vw;
+    height: 76vh;
+    position: absolute;
+    align-self: center;
+    margin: 20px 0 10000px 0;
+    z-index: 10;
+    overflow: scroll;
+}
 .title-container {
     width: 88vw;
-    height: 120px;
+    /* height: 100%; */
     display: flex;
     align-items: center;
 }
 .name-title {
     width: 20%;
     margin-left: 20px;
+    font-size: 30px;
 }
 .link-top {
     color: #c94242;
@@ -189,7 +199,7 @@ footer {
 }
 .page-title {
     width: 60%;
-    font-size: 64px;
+    font-size: 80px;
     font-style:italic;
     display: flex;
     justify-content: center;
@@ -253,7 +263,13 @@ footer {
     width: 82%;
 }
 .eventA {
+    font-size: 35px;
+}
+.eventB {
     font-size: 28px;
+}
+.eventC {
+    font-size: 25px;
 }
 .profile-pic {
     background-image: url("/images/1.jpg");
@@ -263,8 +279,8 @@ footer {
     border-radius: 50%;
     background-position: center;
     position: absolute;
-    right: 200px;
-    top: 12vh;
+    right: 15vw;
+    top: 10vh;
 }
 
 /* write */
@@ -283,10 +299,10 @@ footer {
     cursor: pointer;
 }
 .writing-intro {
-    height: 80vh;
+    height: 52vh;
     width: 88vw;
     position: absolute;
-    top: 0;
+    top: 10vh;
     right: 12vw;
     display: flex;
     flex-direction: column;
@@ -309,14 +325,14 @@ footer {
     opacity: 1;
 }
 .writing-caption {
-    margin: 0 30px 0 30px;
-    font-size: 30px;
+    margin: 100px 30px 0 30px;
+    font-size: 50px;
     width: 70%
 }
 .writing-content-container {
     margin-top: 20px;
     text-align: left;
-    font-size: 24px;
+    font-size: 40px;
 }
 .writing-icon1 {
     background-image: url("/images/writing/writing1.jpg");
@@ -535,7 +551,7 @@ footer {
 }
 .map-container {
     margin-top: 5px;
-    width: 60%;
+    width: 50%;
 }
 .map {
     width: 100%;
@@ -550,7 +566,7 @@ footer {
     width: max-content;
     margin: 0 30px 0 30px;
     align-self: center;
-
+    font-size: 30px;
 }
 .countries-container {
     /* height: 88vh; */
@@ -600,8 +616,7 @@ footer {
 
 /* code */
 .video-wrapper {
-    width: 74%;
-    /* height: 100%; */
+    width: 60%;
     position: absolute;
     align-self: center;
     text-align: center;
@@ -611,7 +626,7 @@ footer {
     padding: 10px 0 10px 0;
 }
 .code-title {
-    font-size: 32px;
+    font-size: 58px;
     margin: 5px 0 8px 0;
 }
 video {
@@ -621,7 +636,7 @@ video {
     box-shadow: 0px 5px 7px 6px rgba(69, 69, 3,.4);
 }
 .github-link {
-    font-size: 25px;
+    font-size: 45px;
     color:#666617;
     text-decoration: none;
     margin: 9px 0 130px 0;
@@ -765,7 +780,7 @@ video {
     align-items: center;
     position: fixed;
     right: 12vw;
-    bottom: 14vh;
+    bottom: 12vh;
     color: rgba(201, 66, 66, .9);
     z-index: 50;
 }
@@ -780,7 +795,50 @@ video {
     font-size: 90px;
 }
 .insta-msg {
-    font-size: 15px;
+    font-size: 20px;
+    margin: -8px 0 -8px 0;
+    padding: 0;
+}
+/* contact */
+.form-wrapper {
+    width: 70vw;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translate(-60%, -8%);
+    padding: 5px 2px 5px 2px;
+    /* background-color: rosybrown; */
+}
+.contact-mail {
+    font-size: 100px;
+}
+.contact-msg {
+    font-size: 50px;
+}
+.contact-phone {
+    font-size: 60px;
+    margin-top: 10px;
+}
+.mail {
+    width: 70vw;
+    height: 420px;
     margin: 0;
     padding: 0;
+    font-size: 700px;
+    position: absolute;
+    top: 25vh;
+    left: 50%;
+    transform: translate(-60%, -10%);
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.mail-icon {
+    color:rgba(245, 245, 20, .5);
+    /* box-shadow: 1px 1px 3px 2px rgba(69, 69, 3,.4); */
 }

@@ -28,7 +28,7 @@ const vids = [
 const codeTitles = [
     "Image Slider",
     "Calculator",
-    "Etch-a-Scetch",
+    "Etch-a-Sketch",
     "Restaurant",
     "Library",
     "Todo List",

@@ -1,6 +1,6 @@
 html {
     color:#666617;
-    font-family: "Quesha", sans-serif;
+    font-family: Courier, Arial;
 }
 
 header {
@@ -25,7 +25,7 @@ main {
     width: 86vw;
     display: flex;
     justify-content:space-evenly;
-    font-size: 180px;
+    font-size: 130px;
     font-style:italic;
     align-items: center;
     color: #fafaf5;
@@ -108,7 +108,7 @@ a {
     transition-duration: 1s;
 }
 .menu {
-    font-size: 45px;
+    font-size: 20px;
     margin: 30px 0 25px 0;
     color:#666617;
 }
@@ -188,7 +188,7 @@ footer {
 .name-title {
     width: 20%;
     margin-left: 20px;
-    font-size: 30px;
+    font-size: 24px;
 }
 .link-top {
     color: #c94242;
@@ -223,20 +223,23 @@ footer {
     font-size: 20px;
     height: 60px;
 }
-.hist2 {
+.hist1, .hist2 {
     height: 40px;
 }
 .hist4 {
-    height: 40px;
+    height: 50px;
 }
 .hist5 {
+    height: 96px;
+}
+.hist6, .hist7{
     height: 90px;
 }
 .hist8 {
-    height: 75px;
+    height: 120px;
 }
 .hist9 {
-    height: 30px;
+    height: 40px;
 }
 .hist10 {
     height: 18px;
@@ -299,7 +302,7 @@ footer {
     cursor: pointer;
 }
 .writing-intro {
-    height: 52vh;
+    height: 80vh;
     width: 88vw;
     position: absolute;
     top: 10vh;
@@ -309,9 +312,11 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-bottom: 200px;
     background-color: rgba(255, 255, 255, .9);
     z-index: 20;
+}
+.writing-content {
+    font-size: 30px;
 }
 .writing-intro:hover {
     cursor: pointer;
@@ -325,12 +330,12 @@ footer {
     opacity: 1;
 }
 .writing-caption {
-    margin: 100px 30px 0 30px;
+    margin: 10px 30px 0 30px;
     font-size: 50px;
     width: 70%
 }
 .writing-content-container {
-    margin-top: 20px;
+    -webkit-margin-bottom-collapse: 20px;
     text-align: left;
     font-size: 40px;
 }
@@ -815,13 +820,13 @@ video {
     /* background-color: rosybrown; */
 }
 .contact-mail {
-    font-size: 100px;
+    font-size: 70px;
 }
 .contact-msg {
     font-size: 50px;
 }
 .contact-phone {
-    font-size: 60px;
+    font-size: 40px;
     margin-top: 10px;
 }
 .mail {
@@ -833,7 +838,7 @@ video {
     position: absolute;
     top: 25vh;
     left: 50%;
-    transform: translate(-60%, -10%);
+    transform: translate(-55%, -10%);
     display: flex;
     text-align: center;
     align-items: center;

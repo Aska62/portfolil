@@ -477,7 +477,7 @@ footer {
     .intro {
         position: fixed;
         left: 0;
-        top: 14vh;
+        top: 20vh;
         z-index: 20;
     }
     .writing-intro {
@@ -723,7 +723,7 @@ footer {
 }
 /* travel */
 .travel-intro {
-    top: 10vh;
+    top: 11vh;
 }
 .map-container {
     margin-top: 5px;
@@ -1038,7 +1038,7 @@ video {
     }
     .capture-desc-cont {
         max-width: 87vw;
-        bottom: 25vh;
+        top: 53vh;
     }
     .capture-desc, .capture-header-1, .capture-header-2, .capture-header-3 {
         color: #666617;
@@ -1096,7 +1096,7 @@ video {
 }
 @media screen and (max-width: 420px) {
     .form-wrapper {
-        margin-top: 40px;
+        margin-top: 20px;
     }
     .contact-mail {
         font-size: 30px;
@@ -1113,7 +1113,7 @@ video {
     .mail {
         width: 70vw;
         height: 420px;
-        margin-top: 40px;
+        margin-top: 20px;
         font-size: 270px;
     }
 }

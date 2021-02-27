@@ -233,15 +233,15 @@ function getDirectionMob(e) {
     // define X position
     if(e.pageX >= 230) {
         countryPicFocus.style.left = `${e.pageX - 300}px`;
-    } else if(e.pageX >= 80 && e.pageX < 230) {
+    } else if(e.pageX < 230 && e.pageX >= 80) {
         countryPicFocus.style.left = "30px";
     } else {
         countryPicFocus.style.left = `${e.pageX + 10}px`;
     };
     // define Y position
-    if(e.pageY > 300) {
+    if(e.pageY >= 300) {
         countryPicFocus.style.bottom =`${e.pageY - 200}px`;
-    } else if(e.pageY < 300 && e.pageY > 200) {
+    } else if(e.pageY < 300 && e.pageY >= 200) {
         countryPicFocus.style.bottom = "50px";
     } else {
         countryPicFocus.style.bottom = `${e.pageY + 20}px`;

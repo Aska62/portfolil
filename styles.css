@@ -725,13 +725,6 @@ footer {
 .travel-intro {
     top: 11vh;
 }
-.map-container {
-    margin-top: 5px;
-    width: 50%;
-}
-.map {
-    width: 100%;
-}
 .travel-content-container {
     width: 80%;
     display: flex;

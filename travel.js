@@ -158,7 +158,7 @@ window.onload = ()=> {
         div.classList.add("travel-pic");
         const chosenTravelPic = travelPicsList[i].image;
         div.style.backgroundImage = `url("${chosenTravelPic}")`;
-        div.style.backgroundSize = "250%";
+        div.style.backgroundSize = "200px";
         div.style.backgroundPosition = "center";
         countryPicContaienr.appendChild(div);
 
@@ -189,6 +189,7 @@ window.onload = ()=> {
             p.textContent = "";
             countryPicFocus.style.display = "none";
         });
+
         div.appendChild(hoverBox);
 
     };
@@ -201,24 +202,47 @@ introCover.addEventListener("click", () => {
     }, 1000);
 });
 
-
 // change position of focused image
 const bodyElement = document.querySelector("body");
-bodyElement.addEventListener("mousemove", getMouseDirection, false);
+if (window.innerWidth <= 420) {
+    bodyElement.addEventListener("mousemove", getDirectionMob, false);
+} else {
+    bodyElement.addEventListener("mousemove", getMouseDirection, false);
+}
+
 
 const box = document.querySelector(".box");
 
+// mouse direction for desktop
 function getMouseDirection(e) {
     // define X position
     if(e.pageX > 500) {
         countryPicFocus.style.left = `${e.pageX - 520}px`;
-
     } else {
         countryPicFocus.style.left = `${e.pageX + 20}px`;
     };
     // define Y position
     if(e.pageY > 300) {
         countryPicFocus.style.bottom =`${e.pageY - 100}px`;
+    } else {
+        countryPicFocus.style.bottom = `${e.pageY + 20}px`;
+    };
+};
+// mouse direction for mobile
+function getDirectionMob(e) {
+    // define X position
+    if(e.pageX >= 230) {
+        countryPicFocus.style.left = `${e.pageX - 300}px`;
+    } else if(e.pageX >= 80 && e.pageX < 230) {
+        countryPicFocus.style.left = "30px";
+    } else {
+        countryPicFocus.style.left = `${e.pageX + 10}px`;
+    };
+    // define Y position
+    if(e.pageY > 300) {
+        countryPicFocus.style.bottom =`${e.pageY - 200}px`;
+    } else if(e.pageY < 300 && e.pageY > 200) {
+        countryPicFocus.style.bottom = "50px";
     } else {
         countryPicFocus.style.bottom = `${e.pageY + 20}px`;
     };

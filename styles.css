@@ -2,14 +2,12 @@ html {
     color:#666617;
     font-family: Courier, Arial;
 }
-
 header {
     height: 10vh;
     width: 88vw;
     align-items: center;
     display: flex;
 }
-
 main {
     width: 88vw;
     display: flex;
@@ -128,7 +126,6 @@ footer {
     background-color: #f5f514;
     display: flex;
     justify-content: flex-end;
-    /* z-index: 15; */
     position: fixed;
     bottom: 0;
     right:0;
@@ -168,6 +165,72 @@ footer {
     justify-content: center;
     align-items: center;
 }
+@media screen and (max-width: 420px) {
+    .main-content {
+        width: 100vw;
+    }
+    .side-bar {
+        /* width: 100vw; */
+        background-color: rgba(250, 250, 232, 0);
+        z-index: 5;
+    }
+    .hamburger-box {
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        right: 10px;
+        top: -20px;
+        z-index: 6;
+    }
+    .hamburger {
+        width: 100%;
+        height: 18%;
+    }
+    .line1, .line2, .line3 {
+        margin-bottom: 5px;
+    }
+    .menu-container {
+        width: 100vw;
+        height: 90vh;
+        display: none;
+        text-align: center;
+        position: fixed;
+        right: 0;
+        top: 12vh;
+        padding-top: 25px;
+        transition-duration: 1s;
+        background-color: rgba(250, 250, 232, .9);
+        z-index: 10;
+    }
+    .menu {
+        font-size: 40px;
+        margin: 30px 0 25px 0;
+        align-self: center;
+        z-index: 15;
+    }
+    .footer-box {
+        display: none;
+    }
+    .category-container1, .category-container2 {
+        display: flex;
+        width: 80vw;
+        flex-direction: column;
+        height: 40vh;
+        font-size: 130px;
+    }
+    .name-container {
+        height: 25%;
+        width: 88vw;
+        font-size: 40px;
+        color:#666617;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 50px;
+        position: fixed;
+        top: 30vh;
+    }
+}
 
 /* about */
 .content-wrapper {
@@ -176,12 +239,11 @@ footer {
     position: absolute;
     align-self: center;
     margin: 20px 0 10000px 0;
-    z-index: 10;
+    z-index: 5;
     overflow: scroll;
 }
 .title-container {
     width: 88vw;
-    /* height: 100%; */
     display: flex;
     align-items: center;
 }
@@ -209,11 +271,29 @@ footer {
     width: 20%;
 }
 
+@media screen and (max-width: 420px) {
+    header {
+        height: 80px;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .name-title {
+        width: 80vw;
+        font-size: 18px;
+    }
+    .page-title {
+        font-size: 60px;
+    }
+}
+
 /* history timeline */
 .history-container {
     margin-top: 40px;
     width: 100%;
-    height: 100%;
+    height: max-content;
     display: flex;
     flex-direction: column;
 }
@@ -222,6 +302,7 @@ footer {
     align-items: baseline;
     font-size: 20px;
     height: 60px;
+    z-index: 0;
 }
 .hist1, .hist2 {
     height: 40px;
@@ -284,6 +365,59 @@ footer {
     position: absolute;
     right: 15vw;
     top: 10vh;
+    z-index: 1;
+}
+@media screen and (max-width: 420px) {
+    .profile-pic {
+        top: 12vh;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 5;
+    }
+    .history-container {
+        margin-top: 175px;
+        width: 95vw;
+        height: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .hist {
+        width: 100%;
+        text-overflow:clip;
+        z-index: 0;
+    }
+    .hist2 {
+        height: 60px;
+    }
+    .hist4 {
+        height: 108px;
+    }
+    .hist5 {
+        height: 208px;
+    }
+    .hist6, .hist7{
+        height: 190px;
+    }
+    .hist8 {
+        height: 290px;
+    }
+    .hist9 {
+        height: 78px;
+    }
+    .hist10 {
+        height: 80px;
+    }
+    .year {
+        width: 52px;
+    }
+    .line {
+        display: none;
+    }
+    .event {
+        height: 100px;
+        margin: 0 0 10px 5px;
+    }
 }
 
 /* write */
@@ -338,6 +472,31 @@ footer {
     -webkit-margin-bottom-collapse: 20px;
     text-align: left;
     font-size: 40px;
+}
+@media screen and (max-width: 420px) {
+    .intro {
+        position: fixed;
+        left: 0;
+        top: 14vh;
+        z-index: 20;
+    }
+    .writing-intro {
+        width: 100%;
+        height: 74vh;
+        right: 0;
+        justify-content: flex-start;
+        padding-top: 35px;
+    }
+    .writing-caption {
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+    .writing-content-container {
+        width: 90vw;
+    }
+    .writing-content {
+        font-size: 20px
+    }
 }
 .writing-icon1 {
     background-image: url("/images/writing/writing1.jpg");
@@ -545,14 +704,26 @@ footer {
     text-align: center;
     z-index: 10;
 }
-.focus-image {
-    height: 100%;
+@media screen and (min-width: 420px) {
+    .focus-image {
+        height: 100%;
+    }
 }
-
+@media screen and (max-width: 420px) {
+    .large-article {
+        width: 80%;
+        height: content;
+        display: flex;
+        align-items: center;
+    }
+    .focus-image {
+        width: 90vw;
+        height: relative;
+    }
+}
 /* travel */
 .travel-intro {
     top: 10vh;
-
 }
 .map-container {
     margin-top: 5px;
@@ -574,7 +745,6 @@ footer {
     font-size: 30px;
 }
 .countries-container {
-    /* height: 88vh; */
     width: 80%;
     font-size: 70px;
     justify-content: center;
@@ -588,7 +758,7 @@ footer {
     grid-template-rows: auto auto auto auto auto;
     justify-self: center;
     width: 88%;
-    height: 80vh;
+    height: 78vh;
     position: fixed;
     left: 0;
     z-index:2;
@@ -617,6 +787,25 @@ footer {
     max-width: 800px;
     color: whitesmoke;
     text-shadow: -3px 3px #666617;
+}
+@media screen and (max-width: 420px) {
+    .travel-content-container {
+        width: 87vw;
+        height: 50vh;
+        text-align: center;
+        justify-content: 5px;
+        z-index: 2;
+    }
+    .travel-cont {
+        font-size: 20px;
+    }
+    .country-pic-focus {
+        width: 300px;
+    }
+    .focus-location-name {
+        bottom: 100px;
+        font-size: 30px;
+    }
 }
 
 /* code */
@@ -651,6 +840,18 @@ video {
     color: #eb7171;
     font-size: 28px;
     transition-duration: .4s;
+}
+@media screen and (max-width: 420px) {
+    .video-wrapper {
+        width: 90vw;
+    }
+    .code-title {
+        font-size: 30px;
+    }
+    .github-link {
+        font-size: 20px;
+        margin-bottom: 70px;
+    }
 }
 
 /* Dive */
@@ -699,6 +900,29 @@ video {
     font-size: 30px;
     color:#8c8c23;
     margin-top: 10px;
+}
+@media screen and (max-width: 420px) {
+    .dive-main {
+        justify-content:flex-start;
+    }
+    .dive-vid-container {
+        width: 90vw;
+    }
+    .dive-header-1, .capture-header-1 {
+        font-size: 18px;
+    }
+    .dive-header-2, .capture-header-2 {
+        font-size: 22px;
+    }
+    .dive-header-3, .capture-header-3 {
+        font-size: 38px;
+    }
+    .dive-desc, .capture-desc {
+        width: 90%;
+        font-size: 16px;
+        margin-top: 10px;
+        text-align: center;
+    }
 }
 
 /* capture */
@@ -773,7 +997,7 @@ video {
     text-shadow: 2px 2px #666617;
 }
 .link-insta {
-    background-color: rgba(255, 255, 255, );
+    background-color: rgba(255, 255, 255, 0);
     width: 92px;
     height: 92px;
     border-radius: 30%;
@@ -803,6 +1027,35 @@ video {
     margin: -8px 0 -8px 0;
     padding: 0;
 }
+@media screen and (max-width: 420px) {
+    .slider-container {
+        width: 100vw;
+    }
+    .image-container {
+        max-width: 90vw;
+        max-height: 80vh;
+        top: 20vh;
+    }
+    .capture-desc-cont {
+        max-width: 87vw;
+        bottom: 25vh;
+    }
+    .capture-desc, .capture-header-1, .capture-header-2, .capture-header-3 {
+        color: #666617;
+        text-shadow: none;
+    }
+    .link-insta {
+        right: 10vw;
+        bottom: 15vh;
+        width: 70px;
+        height: 70px;
+        font-size: 68px;
+    }
+    .capt-insta, .insta-msg {
+        display: none;
+    }
+}
+
 /* contact */
 .form-wrapper {
     width: 70vw;
@@ -840,4 +1093,27 @@ video {
 }
 .mail-icon {
     color:rgba(245, 245, 20, .5);
+}
+@media screen and (max-width: 420px) {
+    .form-wrapper {
+        margin-top: 40px;
+    }
+    .contact-mail {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .contact-msg {
+        font-size: 25px;
+        margin-bottom:18px;
+    }
+    .contact-phone {
+        font-size: 23px;
+        margin: 0;
+    }
+    .mail {
+        width: 70vw;
+        height: 420px;
+        margin-top: 40px;
+        font-size: 270px;
+    }
 }

@@ -231,9 +231,9 @@ function getMouseDirection(e) {
 // mouse direction for mobile
 function getDirectionMob(e) {
     // define X position
-    if(e.pageX >= 230) {
+    if(e.pageX >= 280) {
         countryPicFocus.style.left = `${e.pageX - 300}px`;
-    } else if(e.pageX < 230 && e.pageX >= 80) {
+    } else if(e.pageX < 280 && e.pageX >= 80) {
         countryPicFocus.style.left = "30px";
     } else {
         countryPicFocus.style.left = `${e.pageX + 10}px`;

@@ -172,7 +172,7 @@ footer {
     .side-bar {
         /* width: 100vw; */
         background-color: rgba(250, 250, 232, 0);
-        z-index: 5;
+        z-index: 25;
     }
     .hamburger-box {
         width: 30px;
@@ -196,7 +196,7 @@ footer {
         text-align: center;
         position: fixed;
         right: 0;
-        top: 12vh;
+        top: 10vh;
         padding-top: 25px;
         transition-duration: 1s;
         background-color: rgba(250, 250, 232, .9);
@@ -207,6 +207,9 @@ footer {
         margin: 30px 0 25px 0;
         align-self: center;
         z-index: 15;
+    }
+    .footer {
+        z-index: 5;
     }
     .footer-box {
         display: none;
@@ -293,37 +296,16 @@ footer {
 .history-container {
     margin-top: 40px;
     width: 100%;
-    height: max-content;
+    height: 70vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .hist {
     display: flex;
     align-items: baseline;
     font-size: 20px;
-    height: 60px;
     z-index: 0;
-}
-.hist1, .hist2 {
-    height: 40px;
-}
-.hist4 {
-    height: 50px;
-}
-.hist5 {
-    height: 96px;
-}
-.hist6, .hist7{
-    height: 90px;
-}
-.hist8 {
-    height: 120px;
-}
-.hist9 {
-    height: 40px;
-}
-.hist10 {
-    height: 18px;
 }
 .year {
     width: 8%;
@@ -345,6 +327,7 @@ footer {
 }
 .event {
     width: 82%;
+    height: fit-content;
 }
 .eventA {
     font-size: 35px;
@@ -357,11 +340,12 @@ footer {
 }
 .profile-pic {
     background-image: url("/images/1.jpg");
-    background-size: 200px;
+    background-size: 800px;
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    background-position: center;
+    background-position-x: 505px;
+    background-position-y: -240px;
     position: absolute;
     right: 15vw;
     top: 10vh;
@@ -374,52 +358,41 @@ footer {
         transform: translate(-50%);
         z-index: 5;
     }
+    .content-wrapper {
+        margin: 24vh 0 0 15px;
+        height: 54vh;
+    }
     .history-container {
-        margin-top: 175px;
         width: 95vw;
-        height: relative;
+        height: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin: 0;
     }
     .hist {
-        width: 100%;
-        text-overflow:clip;
-        z-index: 0;
-    }
-    .hist2 {
-        height: 60px;
-    }
-    .hist4 {
-        height: 108px;
-    }
-    .hist5 {
-        height: 208px;
-    }
-    .hist6, .hist7{
-        height: 190px;
-    }
-    .hist8 {
-        height: 290px;
-    }
-    .hist9 {
-        height: 78px;
-    }
-    .hist10 {
-        height: 80px;
+        width: 80vw;
+        height: fit-content;
+        text-overflow: wrap;
+        z-index: 1;
     }
     .year {
         width: 52px;
+        border-right: none;
+        padding-right: 2px;
     }
     .line {
         display: none;
     }
     .event {
-        height: 100px;
-        margin: 0 0 10px 5px;
+        width: 72vw;
+        height: fit-content;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        border-left: solid #666617 1px;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 421px) and (max-width: 800px) {
     .profile-pic {
         top: 8vh;
         z-index: 5;
@@ -432,41 +405,18 @@ footer {
         flex-direction: column;
         justify-content: space-between;
     }
-    .hist {
-        width: 100%;
-        text-overflow:clip;
-        z-index: 0;
-    }
-    .hist2 {
-        height: 60px;
-    }
-    .hist4 {
-        height: 80px;
-    }
-    .hist5 {
-        height: 140px;
-    }
-    .hist6, .hist7{
-        height: 110px;
-    }
-    .hist8 {
-        height: 140px;
-    }
-    .hist9 {
-        height: 70px;
-    }
-    .hist10 {
-        height: 5px;
-    }
     .year {
         width: 52px;
+        border-right: none;
     }
     .line {
         display: none;
     }
     .event {
-        height: 100px;
-        margin: 0 0 10px 5px;
+        height: fit-content;
+        margin: 0 0 50px 5px;
+        padding-left: 10px;
+        border-left: solid #666617 1px;
     }
 }
 
@@ -527,15 +477,15 @@ footer {
     .intro {
         position: fixed;
         left: 0;
-        top: 20vh;
+        top: 10vh;
         z-index: 20;
     }
     .writing-intro {
         width: 100%;
-        height: 74vh;
+        height: 80vh;
         right: 0;
         justify-content: flex-start;
-        padding-top: 35px;
+        padding-top: 10px;
     }
     .writing-caption {
         font-size: 34px;
@@ -548,7 +498,7 @@ footer {
         font-size: 20px
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 421px) and (max-width: 800px) {
     .writing-intro {
         justify-content: flex-start;
         padding-top: 40px;
@@ -784,7 +734,7 @@ footer {
         height: relative;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 421px) and (max-width: 800px) {
     .large-article {
         width: 80vw;
         height: max-content;
@@ -796,13 +746,15 @@ footer {
 }
 /* travel */
 .travel-intro {
-    top: 11vh;
+    top: 10vh;
+    opacity: .7
 }
 .travel-content-container {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
+    text-align: center;
+    margin-top: 15px;
 }
 .travel-cont {
     width: max-content;
@@ -848,8 +800,8 @@ footer {
     font-size: 70px;
     z-index: 3;
     position: absolute;
-    bottom: -85px;
-    left: -5%;
+    /* bottom: -5px; */
+    /* left: -5%; */
     max-width: 800px;
     color: whitesmoke;
     text-shadow: -3px 3px #666617;
@@ -960,12 +912,11 @@ video {
 }
 .dive-desc, .capture-desc {
     width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-size: 30px;
+    text-align: center;
     color:#8c8c23;
     margin-top: 10px;
+
 }
 @media screen and (max-width: 420px) {
     .dive-main {
@@ -987,10 +938,9 @@ video {
         width: 90%;
         font-size: 16px;
         margin-top: 10px;
-        text-align: center;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 421px) and (max-width: 800px) {
     .dive-main {
         justify-content:flex-start;
     }
@@ -1001,7 +951,6 @@ video {
         margin: 8px 0 10px 0;
     }
     .dive-desc {
-        text-align: center;
         margin-top: 0;
     }
 }
@@ -1079,7 +1028,7 @@ video {
 }
 .link-insta {
     background-color: rgba(255, 255, 255, 0);
-    width: 92px;
+    width: 120px;
     height: 92px;
     border-radius: 30%;
     font-size: 90px;
@@ -1088,10 +1037,10 @@ video {
     flex-direction: column;
     align-items: center;
     position: fixed;
-    right: 12vw;
-    bottom: 12vh;
+    right: 14vw;
+    bottom: 14vh;
     color: rgba(201, 66, 66, .9);
-    z-index: 50;
+    z-index: 5;
 }
 .link-insta:hover {
     cursor: pointer;
@@ -1110,33 +1059,42 @@ video {
 }
 @media screen and (max-width: 420px) {
     .slider-container {
-        width: 100vw;
+        width: 90%;
+        position: fixed;
+        top: 16vh;
+        padding-left: 5vw;
     }
     .image-container {
-        max-width: 90vw;
+        max-width: 90%;
         max-height: 80vh;
-        top: 20vh;
+        top: 16vh;
     }
     .capture-desc-cont {
-        max-width: 87vw;
-        top: 53vh;
+        width: 90vw;
+        margin-top: 25px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -10%);
     }
     .capture-desc, .capture-header-1, .capture-header-2, .capture-header-3 {
         color: #666617;
         text-shadow: none;
     }
     .link-insta {
-        right: 10vw;
-        bottom: 15vh;
-        width: 70px;
-        height: 70px;
-        font-size: 68px;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, 70%);
+        bottom: 20vh;
+        width: 100px;
+        height: 50px;
+        font-size: 60px;
     }
     .capt-insta, .insta-msg {
-        display: none;
+        font-size: 17px;
+        margin-bottom: 1px;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 421px) and (max-width: 800px) {
     .slider-container {
         width: 100vw;
     }
@@ -1173,14 +1131,15 @@ video {
     margin-top: 100px;
 }
 .contact-mail {
-    font-size: 70px;
+    font-size: 58px;
+    margin-bottom: 25px;
 }
 .contact-msg {
-    font-size: 50px;
+    font-size: 45px;
 }
 .contact-phone {
     font-size: 40px;
-    margin-top: 30px;
+    margin: 0;
 }
 .mail {
     width: 70vw;
@@ -1200,6 +1159,7 @@ video {
 @media screen and (max-width: 420px) {
     .form-wrapper {
         margin-top: 20px;
+        width: max-content;
     }
     .contact-mail {
         font-size: 30px;
@@ -1220,7 +1180,7 @@ video {
         font-size: 270px;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 421px) and (max-width: 800px) {
     .form-wrapper {
         margin-top: 30px;
     }

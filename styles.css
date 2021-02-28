@@ -292,6 +292,25 @@ footer {
     }
 }
 
+@media screen and (min-width: 421px) and (max-width: 800px) {
+    header {
+        height: 80px;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .name-title {
+        width: 80vw;
+        font-size: 20px;
+        margin-bottom: -8px;
+    }
+    .page-title {
+        font-size: 65px;
+    }
+}
+
 /* history timeline */
 .history-container {
     margin-top: 40px;
@@ -464,7 +483,7 @@ footer {
     opacity: 1;
 }
 .writing-caption {
-    margin: 10px 30px 0 30px;
+    margin: 0 30px 0 30px;
     font-size: 50px;
     width: 70%
 }
@@ -472,6 +491,7 @@ footer {
     -webkit-margin-bottom-collapse: 20px;
     text-align: left;
     font-size: 40px;
+    padding: 30px 50px 0 50px;
 }
 @media screen and (max-width: 420px) {
     .intro {
@@ -502,13 +522,18 @@ footer {
     .writing-intro {
         justify-content: flex-start;
         padding-top: 40px;
+        height: 75vh;
     }
     .writing-caption {
+        font-size: 38px;
         margin-bottom: 20px;
     }
     .writing-content-container {
-        width: 60vw;
+        width: 70vw;
         text-align: center;
+    }
+    .writing-content {
+        font-size: 20px;
     }
 }
 .writing-icon1 {
@@ -956,12 +981,20 @@ video {
 }
 
 /* capture */
+.capture-main {
+    height: 80vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .slider-container {
     width: 88vw;
-    height: 40vh;
+    height: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 .image-container {
     max-width: 64vw;
@@ -970,14 +1003,13 @@ video {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 24vh;
 }
 .image {
     width: 100%;
     height: relative;
     transition: all 1s ease-in-out;
     box-shadow: 0px 5px 7px 6px rgba(69, 69, 3,.4);
+
 }
 .right {
     position: fixed;
@@ -1006,19 +1038,15 @@ video {
     top: 20vh;
     z-index: 30;
 }
-.button:hover{
-    cursor: pointer;
-    background: rgba(191, 105, 105, .7);
-    color: whitesmoke;
-}
 .capture-desc-cont {
-    max-width: 60vw;
+    margin-top: 25px;
+    width: 80vw;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     align-self:center;
     align-items: center;
-    position: fixed;
-    bottom: 23vh;
+    overflow: scroll;
 }
 
 .capture-desc, .capture-header-1, .capture-header-2, .capture-header-3 {
@@ -1031,60 +1059,49 @@ video {
     width: 120px;
     height: 92px;
     border-radius: 30%;
-    font-size: 90px;
+    font-size: 70px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
-    right: 14vw;
-    bottom: 14vh;
+    position: absolute;
+    right: 12vw;
+    top: 60vh;
     color: rgba(201, 66, 66, .9);
     z-index: 5;
 }
 .link-insta:hover {
     cursor: pointer;
-    font-size: 90px;
+    font-size: 80px;
     color: rgba(201, 66, 66, 1);
     background-color:rgba(255, 255, 255, .5);
 }
-.capt-insta {
-    align-self: center;
-    font-size: 90px;
-}
 .insta-msg {
-    font-size: 20px;
-    margin: -8px 0 -8px 0;
+    font-size: 15px;
+    margin: -5px 0 -5px 0;
     padding: 0;
 }
 @media screen and (max-width: 420px) {
-    .slider-container {
-        width: 90%;
-        position: fixed;
-        top: 16vh;
-        padding-left: 5vw;
+    .capture-main {
+        overflow: scroll;
     }
     .image-container {
         max-width: 90%;
         max-height: 80vh;
-        top: 16vh;
     }
     .capture-desc-cont {
         width: 90vw;
+        height: fit-content;
         margin-top: 25px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -10%);
     }
     .capture-desc, .capture-header-1, .capture-header-2, .capture-header-3 {
         color: #666617;
         text-shadow: none;
     }
     .link-insta {
-        position: fixed;
-        left: 50%;
-        transform: translate(-50%, 70%);
-        bottom: 20vh;
+        position: static;
+        justify-self: center;
+        padding-top: 30px;
         width: 100px;
         height: 50px;
         font-size: 60px;
@@ -1101,19 +1118,19 @@ video {
     .image-container {
         width: 120%;
         top: 17vh;
-        left: 50%;
-        transform: translate(-60%);
     }
     .capture-desc-cont {
         max-width: 80vw;
         top: 50vh;
     }
     .link-insta {
-        right: 15vw;
-        bottom: 15vh;
+        top: 77vh;
         width: 120px;
         height: 70px;
-        font-size: 90px;
+        font-size: 70px;
+    }
+    .insta-msg {
+        font-size: 12px;
     }
 }
 
